@@ -13,7 +13,6 @@ spec:
       labels:
         name: nginx
     spec:
-      type: NodePort
       containers:
         - name: nginx
           image: nginx
@@ -27,7 +26,6 @@ kind: Service
 metadata:
   name: nginx-service
 spec:
-  type: NodePort
   selector:
     name: nginx
   ports:
@@ -43,7 +41,6 @@ metadata:
   labels:
     name: curl
 spec:
-  type: NodePort
   containers:
     - name: curl
       image: khannedy/nginx-curl
